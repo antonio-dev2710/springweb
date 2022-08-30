@@ -16,42 +16,36 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Nome</th>
-                            <th>email</th>
-                            <th>endereço</th>
-                            <th>telefone</th>
+                            <th>Email</th>
+                            <th>Senha</th>
                             <th></th>
                             <th></th>
+
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Id</th>
                             <th>Nome</th>
-                            <th>email</th>
-                            <th>telefone</th>
-                            <th>endereço</th>
+                            <th>Email</th>
+                            <th>Senha</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>email@test.com</td>
-                            <td>Edinburgh</td>
-                            <td>4566778-97877</td>
+
+                        <tr th:each="administrador : ${administradores}">
+                            <td th:text="${administrador.id}">...</td>
+                            <td th:text="${administrador.nome}">...</td>
+                            <td th:text="${administrador.email}">...</td>
+                            <td th:text="${administrador.senha}">..</td>
                             <td><a href="#" class="btn btn-outline-success"> Alterar </td>
-                            <td><a href="#" class="btn btn-outline-danger">  Excluir </td>
+                            <td><a href="#" class="btn btn-outline-danger"> Excluir </td>
                         </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>email@test.com</td>
-                            <td>Tokyo</td>
-                            <td>4566778-97877</td>
-                            <td><a href="#" class="btn btn-outline-success"> Alterar </td>
-                            <td><a href="#" class="btn btn-outline-danger">  Excluir </td>
-                        </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
